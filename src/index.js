@@ -8,3 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
     dateInput.min = birthDateString;
     dateInput.max = formattedMaxDate;
   });
+   
+
+  //validation
+  const email = document.getElementById('email');
+  email.addEventListener("input",() => validateEmail(email));
+   
+
+
+  function validateEmail(e){
+    if (e.validity.typeMismatch) {
+      e.setCustomValidity("Please enter a valid email address.");
+      e.reportValidity();
+    }else{
+      e.setCustomValidity(" ")
+    }
+  }
+
+

@@ -61,11 +61,11 @@ function displayDetails() {
   let tbody = document.getElementById("tablebody");
   if (entries) {
     const tabledata = entries.map((e) => {
-      let name = `<td class="px-4 py-2 border">${e.name}</td>`;
-      let email = `<td class="px-4 py-2 border">${e.email}</td>`;
-      let password = `<td class="px-4 py-2 border">${e.password}</td>`;
-      let dob = `<td class="px-4 py-2 border">${e.dob}</td>`;
-      let tandc = `<td class="px-4 py-2 border">${e.tandc}</td>`;
+      let name = `<td class="px-4 py-2 border min-w-fit">${e.name}</td>`;
+      let email = `<td class="px-4 py-2 border min-w-fit">${e.email}</td>`;
+      let password = `<td class="px-4 py-2 border min-w-fit">${e.password}</td>`;
+      let dob = `<td class="px-4 py-2 border min-w-fit">${e.dob}</td>`;
+      let tandc = `<td class="px-4 py-2 border min-w-fit">${e.tandc}</td>`;
       let row = `<tr class="bg-gray-100 border-b"> ${name} ${email} ${password} ${dob} ${tandc}</tr>`;
       return row;
   }).join("\n");
